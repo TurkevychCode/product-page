@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu:wght@600&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --header-color: #FFCC26;
+  --title-color: #414141;
+  --header-border-bottom-color: #000000;
+  --color-border-cards: #414141;
+  --color-like-button: #FFCC26;
+  --color-icon-heart: #ffff;
+  --change-color-icon-heart: #414141;
+  --color-name-product: #414141;
+  --color-price-product: #414141;
+}
