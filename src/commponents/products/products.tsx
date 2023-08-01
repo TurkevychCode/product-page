@@ -1,14 +1,23 @@
 import {Product} from "../service/types";
 import {FaHeart} from "react-icons/fa";
+import {useState} from "react";
 
 interface ProductsProps {
     products: Product[];
-    addToFavorite: (product: Product) => void
+    addToFavorite: (product: Product) => void;
+    hasFavorites: boolean
 }
 
-export default function Products({products, addToFavorite}: ProductsProps) {
+export default function Products({products, addToFavorite, hasFavorites}: ProductsProps) {
+    const [isHearted, setIsHearted] = useState<{ [key: string]: boolean }>({});
+    const handleHeartClick = (productId:number) => {
+        setIsHearted((prevState) => ({
+            ...prevState,
+            [productId]: !prevState[productId],
+        }));
+    }
     return (
-        <div className='products'>
+        <div className={`products ${hasFavorites ? 'products-with-favorites' : ''}`}>
             {
                 products.map((product) => (
                     <div className='products-card' key={product.id}>
@@ -20,8 +29,12 @@ export default function Products({products, addToFavorite}: ProductsProps) {
                         <div className='products-card-controlBlock'>
                             <p className='products-card-controlBlock-price'>$ {product.price}</p>
                             <button className='products-card-controlBlock-likeButton'
-                                    onClick={() => addToFavorite(product)}><FaHeart
-                                className='products-card-controlBlock-likeButton-heart'/></button>
+                                    onClick={() => {
+                                        handleHeartClick(product.id);
+                                        addToFavorite(product)}}>
+                                <FaHeart className={isHearted[product.id] ? 'products-card-controlBlock-likeButton-heart active'
+                                    : 'products-card-controlBlock-likeButton-heart'}/>
+                            </button>
                         </div>
                     </div>
                 ))

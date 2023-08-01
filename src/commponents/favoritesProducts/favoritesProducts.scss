@@ -1,4 +1,4 @@
-.favoritesProducts{
+.favoritesProducts {
   width: 410px;
   height: 600px;
   border: 1px dashed black;
@@ -6,7 +6,7 @@
   margin: 80px 0 0 50px;
   padding: 30px;
 
-  &-title{
+  &-title {
     font-family: 'Anek Telugu', serif;
     font-weight: 600;
     font-size: 24px;
@@ -14,9 +14,11 @@
     text-transform: uppercase;
     margin-bottom: 20px;
   }
+
   &-productsBlock {
     height: 500px;
     overflow: scroll;
+
     &-card {
       width: 350px;
       height: 130px;
@@ -29,7 +31,7 @@
 
       &-image {
         width: 100px;
-        height: 100px;
+        height: 120px;
       }
 
       &-blockTitlePrice {
@@ -77,7 +79,7 @@
           }
         }
       }
-
     }
   }
 }
+
