@@ -1,0 +1,83 @@
+.favoritesProducts{
+  width: 410px;
+  height: 600px;
+  border: 1px dashed black;
+  border-radius: 30px;
+  margin: 80px 0 0 50px;
+  padding: 30px;
+
+  &-title{
+    font-family: 'Anek Telugu', serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--title-color);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  &-productsBlock {
+    height: 500px;
+    overflow: scroll;
+    &-card {
+      width: 350px;
+      height: 130px;
+      margin-top: 10px;
+      background-color: var(--backgroud-color-favorite-card);
+      border-radius: 30px;
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+
+      &-image {
+        width: 100px;
+        height: 100px;
+      }
+
+      &-blockTitlePrice {
+        width: 180px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        &-title {
+          font-family: 'Poppins', serif;
+          font-weight: 400;
+          line-height: 15px;
+          font-size: 0.9rem;
+          color: var(--color-name-product);
+        }
+
+        &-price {
+          display: flex;
+          justify-content: space-between;
+
+          &-priceText {
+            font-family: 'Poppins', serif;
+            font-weight: 500;
+            font-size: 15px;
+            color: var(--color-price-product);
+          }
+
+          &-button {
+            width: 30px;
+            height: 30px;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--color-like-button);
+
+            &-heart {
+              font-size: 20px;
+              color: var(--change-color-icon-heart);
+
+              &:hover {
+                color: var(--color-icon-heart);
+                transition: 0.5s;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
