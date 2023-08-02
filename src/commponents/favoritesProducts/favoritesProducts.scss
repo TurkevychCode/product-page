@@ -18,6 +18,11 @@
   &-productsBlock {
     height: 500px;
     overflow: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      width: 0.5em;
+    }
+
 
     &-card {
       width: 350px;
