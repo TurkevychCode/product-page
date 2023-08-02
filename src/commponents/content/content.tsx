@@ -1,15 +1,15 @@
 import {useEffect, useState} from "react";
 import {getData} from "../service/getData";
 import {Product} from "../service/types";
-import Products from "../products/products";
 import FavoritesProducts from "../favoritesProducts/favoritesProducts";
 import ProductDetails from "../productDetails/productDetails";
+import Products from "../products/products";
 
 export default function Content() {
     const [products, setProducts] = useState<Product[]>([]);
     const [favoritesProducts, setFavoritesProducts] = useState<Product[]>([]);
     const [selectProduct, setSelectProduct] = useState<Product | null>(null);
-    const [isProductDetailsVisible, setIsProductDetailsVisible] = useState<boolean>(true);
+    const [isProductDetailsVisible, setIsProductDetailsVisible] = useState<boolean>(false);
 
 
     useEffect(() => {
