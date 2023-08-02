@@ -26,9 +26,7 @@ export default function FavoritesProducts({favoritesProducts,onMouseEnter,
     return (
             <div className='favoritesProducts'>
                 <h2 className='favoritesProducts-title'>Favorites</h2>
-                <div className='favoritesProducts-productsBlock'
-                     onMouseEnter={onMouseEnter}
-                     onMouseLeave={onMouseLeave}>
+                <div className='favoritesProducts-productsBlock'>
                     {favoritesProducts.map((product, key) => (
                         <div className="favoritesProducts-productsBlock-card" key={key}
                              onMouseEnter={() => handleMouseEnter(product)}
